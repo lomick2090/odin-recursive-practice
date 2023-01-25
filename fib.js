@@ -1,6 +1,6 @@
 function fibs(n) {
     array = [];
-    for (let i=0; i <= n; i ++) {
+    for (let i=0; i < n; i ++) {
         if (i < 2) {
             array.push(1);
         } else {
@@ -10,5 +10,20 @@ function fibs(n) {
     return array;
 }
 
-console.log(fibs(8));
+console.log(fibs(500));
 
+function fibsRec(n, array = []) {
+    if (n <= 0) {
+        return array;
+    } 
+
+    while (array.length < 2) {
+        array.push(1);
+        n--
+    }
+
+    array.push(array[array.length-2]+ array[array.length-1]);
+    return fibsRec(n-1, array)
+}
+
+console.log(fibsRec(500));
