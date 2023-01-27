@@ -10,7 +10,7 @@ function fibs(n) {
     return array;
 }
 
-console.log(fibs(500));
+console.log(fibs(10));
 
 function fibsRec(n, array = []) {
     if (n <= 0) {
@@ -26,4 +26,4 @@ function fibsRec(n, array = []) {
     return fibsRec(n-1, array)
 }
 
-console.log(fibsRec(500));
+console.log(fibsRec(10));
